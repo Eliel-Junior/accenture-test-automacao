@@ -2,16 +2,16 @@ import preencherPage from '../support/pages/preenchimento'
 
 describe('Obter seguro veicular', () => {
 
-    context('quando submeto o formulário do veículo', () => {
+    context('quando submeto os formulários', () => {
 
-        it('deve avançar para o formulário de Insurant Data', () => {
+        it('deve preencher o formulário: Enter Vehicle Data', () => {
             cy.visit('https://sampleapp.tricentis.com/101/app.php')
 
             preencherPage.submitVehicle()
             preencherPage.shouldBeTitleVehicle()
         })
 
-        it('deve avançar para o formulário de Product Data', ()=> {
+        it('deve preencher o formulário: Enter Insurant Data', ()=> {
             cy.visit('https://sampleapp.tricentis.com/101/app.php')
 
             preencherPage.submitVehicle()
@@ -19,7 +19,7 @@ describe('Obter seguro veicular', () => {
             preencherPage.shouldBeTitleProcuct()
         })
 
-        it('deve avançar para o formulário de Price Option', ()=> {
+        it('deve preencher o formulário: Enter Product Data', ()=> {
             cy.visit('https://sampleapp.tricentis.com/101/app.php')
 
             preencherPage.submitVehicle()
@@ -28,7 +28,7 @@ describe('Obter seguro veicular', () => {
             preencherPage.shouldBeTitlePrice()
         })
 
-        it('deve avançar para o formulário de Send Quote', ()=> {
+        it('deve preencher o formulário: Select Price Option', ()=> {
             cy.visit('https://sampleapp.tricentis.com/101/app.php')
 
             preencherPage.submitVehicle()
@@ -38,7 +38,7 @@ describe('Obter seguro veicular', () => {
             preencherPage.shouldBeTitleQuote()
         })
 
-        it('deve enviar cotação com sucesso', ()=> {
+        it('deve enviar o email com sucesso', ()=> {
             cy.visit('https://sampleapp.tricentis.com/101/app.php')
 
             preencherPage.submitVehicle()
@@ -48,7 +48,6 @@ describe('Obter seguro veicular', () => {
             preencherPage.submitSendQuote()
             preencherPage.shouldBeMessageSuccess()
         })
-
 
     })
 

@@ -7,7 +7,7 @@ class PreencherPage {
 
         cy.get('#make').select('Volkswagen')
         cy.get('#engineperformance').type('1.6')
-        cy.get('#dateofmanufacture').type('08/13/2024')
+        cy.get('#dateofmanufacture').type('08/15/2024')
         cy.get('#numberofseats').select('5')
         cy.get('#fuel').select('Gas')
         cy.get('#listprice').type('50000')
@@ -40,7 +40,7 @@ class PreencherPage {
             .click()
     }
 
-        // Valida o título da página seguinte, a qual é direcionada após o preencimento.
+    // Valida o título da página seguinte, a qual é direcionada após o preencimento.
     shouldBeTitleProcuct() {
         cy.contains('#idealsteps-nav li[class="idealsteps-step-active"] #enterproductdata', 'Enter Product Data')
             .should('be.visible')
@@ -49,7 +49,7 @@ class PreencherPage {
 
     // Preenchimento do formulário 'Enter Product Data'
     submitProduct() {
-        cy.get('#startdate').type('09/20/2024')
+        cy.get('#startdate').type('09/29/2024')
         cy.get('#insurancesum').select('3.000.000,00')
         cy.get('#meritrating').select('Bonus 1')
         cy.get('#damageinsurance').select('Full Coverage')
